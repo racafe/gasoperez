@@ -74,7 +74,6 @@ var app = {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
             }
 
-
         }, function (error) { 
             console.log("Scanning failed: ", error); 
         } );
