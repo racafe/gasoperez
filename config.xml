@@ -12,11 +12,13 @@
     <author href="http://technit.com.mx" email="support@phonegap.com">
         PhoneGap Team
     </author>
-
+	
+	<access origin="*" />
+	
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>
 	<gap:plugin name="com.phonegap.plugin.statusbar" />
 	<gap:plugin name="org.apache.cordova.dialogs" />
-	
+	<plugin name="Notification" value="CDVNotification" />
 	<!--gap:plugin name="com.phonegap.plugins.childbrowser" version="5.0.0" /-->
 	
     <feature name="http://api.phonegap.com/1.0/device" />
@@ -25,7 +27,7 @@
        <param name="key" value="willoughby"/>
     </feature-->
 	
-	<preference name="StatusBarOverlaysWebView" value="true" />
+	<preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="phonegap-version" value="3.3.0" />
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />

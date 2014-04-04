@@ -176,6 +176,7 @@ var app = {
 				"GasoPerez99"		, 
 				"GasoPerez100"
 			);
+			navigator.notification.vibrate();
 			if(res[1]!=undefined){
 				for (var i = 0; i < permitidos.length; i++) {
 					if (permitidos[i] == res[1]) {
