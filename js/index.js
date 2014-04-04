@@ -181,6 +181,7 @@ var app = {
 				for (var i = 0; i < permitidos.length; i++) {
 					if (permitidos[i] == res[1]) {
 						document.getElementById("info").innerHTML = "PERMITIDO";
+						break;
 					}else{
 						document.getElementById("info").innerHTML = "NO PERMITIDO";
 					}
