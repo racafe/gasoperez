@@ -64,9 +64,8 @@ var app = {
             "Format: " + result.format + "\n" + 
             "Cancelled: " + result.cancelled);  
 */
-			
-			var res = result.split("http://technit.com.mx/gasoperez.php?qwerasdfzxcvqwerasdfzxcv=");
 			document.getElementById("result").innerHTML = result;
+			var res = result.split("http://technit.com.mx/gasoperez.php?qwerasdfzxcvqwerasdfzxcv=");
 			document.getElementById("info").innerHTML = res;
 /*			if(res[1]!=undefined){
 	            document.getElementById("info").innerHTML = res[1];
