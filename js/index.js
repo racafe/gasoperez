@@ -54,7 +54,7 @@ var app = {
 
     scan: function() {
         console.log('scanning');
-        
+        document.getElementById('app').style.display = "none";
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
         scanner.scan( function (result) { 
@@ -180,16 +180,23 @@ var app = {
 			if(res[1]!=undefined){
 				for (var i = 0; i < permitidos.length; i++) {
 					if (permitidos[i] == res[1]) {
-						document.getElementById("info").innerHTML = "PERMITIDO";
+						//document.getElementById("info").innerHTML = "PERMITIDO";
+						document.getElementById('body').style.backgroundColor = "#3f3";
 						navigator.notification.vibrate(2000);
+						setTimeout(function(){ document.getElementById('app').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 						break;
 					}else{
-						document.getElementById("info").innerHTML = "NO PERMITIDO";
+						document.getElementById('body').style.backgroundColor = "#f33";
+						//document.getElementById("info").innerHTML = "NO PERMITIDO";
 					}
+					if(i==permitidos.length-1)
+						setTimeout(function(){ document.getElementById('app').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 				}
 			}else{
-				document.getElementById("info").innerHTML = "No existe en BD";
+				setTimeout(function(){ document.getElementById('app').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
+				//document.getElementById("info").innerHTML = "No existe en BD";
 			}
+
             console.log(result);
 
 /*            if (args.format == "QR_CODE") {

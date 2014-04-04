@@ -25,18 +25,12 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Barcode Scanner Demo</title>
     </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-            <p><a href="#" class="topcoat-button" id="scan">SCAN</a></p>
-            <p id="info">info</p>
+    <body id="body">
+        <div class="app" id="app">
+            <div id="scan">SCAN</div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="barcodescanner.js"></script>
+        <!--script type="text/javascript" src="barcodescanner.js"></script>
         <script type="text/javascript" src="statusbar.js"></script>
         <script type="text/javascript" src="dialogs.js"></script>
         <!--script type="text/javascript" src="childbrowser.js"></script-->
