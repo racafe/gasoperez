@@ -54,7 +54,8 @@ var app = {
 
     scan: function() {
         console.log('scanning');
-        document.getElementById('app').style.display = "none";
+        document.getElementById('scan').style.display = "none";
+		document.getElementById('logo').style.display = "none";
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
         scanner.scan( function (result) { 
 /*            alert("We got a barcode\n" + 
@@ -181,26 +182,30 @@ var app = {
 					for (var i = 0; i < permitidos.length; i++) {
 						if (permitidos[i] == res[1]) {
 							document.getElementById('body').style.backgroundColor = "#3f3";
-							setTimeout(function(){ document.getElementById('app').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
+							setTimeout(function(){ document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 							break;
 						}else{
 							document.getElementById('body').style.backgroundColor = "#f33";
-							setTimeout(function(){ document.getElementById('app').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
+							setTimeout(function(){ document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 						}
 						if(i==permitidos.length-1)
-							setTimeout(function(){ document.getElementById('app').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
+							setTimeout(function(){ document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 					}
 				}else{
 					document.getElementById('body').style.backgroundColor = "#f33";
-					setTimeout(function(){ document.getElementById('app').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
+					setTimeout(function(){ document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 				}
 			}else{
-				document.getElementById('app').style.display = "block";
+				document.getElementById('scan').style.display = "block";
+				document.getElementById('logo').style.display = "block";
 				document.getElementById('body').style.backgroundColor = "#fff";
 			}
 
         }, function (error) { 
             console.log("Scanning failed: ", error); 
+			document.getElementById('scan').style.display = "block";
+			document.getElementById('logo').style.display = "block";
+			document.getElementById('body').style.backgroundColor = "#fff";
         } );
     },
 
