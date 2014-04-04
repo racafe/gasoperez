@@ -66,8 +66,125 @@ var app = {
 */
 			result = result.text
 			var res = result.split("http://technit.com.mx/gasoperez.php?qwerasdfzxcvqwerasdfzxcv=");
+			var permitidos = new Array(
+				"GasoPerez1"		, 
+				"GasoPerez2"		, 
+				"GasoPerez3"		, 
+				"GasoPerez4"		, 
+				"GasoPerez5"		, 
+				"GasoPerez6"		, 
+				"GasoPerez7"		, 
+				"GasoPerez8"		, 
+				"GasoPerez9"		, 
+				"GasoPerez10"		, 
+				
+				"GasoPerez11"		, 
+				"GasoPerez12"		, 
+				"GasoPerez13"		, 
+				"GasoPerez14"		, 
+				"GasoPerez15"		, 
+				"GasoPerez16"		, 
+				"GasoPerez17"		, 
+				"GasoPerez18"		, 
+				"GasoPerez19"		, 
+				"GasoPerez20"		, 
+				
+				"GasoPerez21"		, 
+				"GasoPerez22"		, 
+				"GasoPerez23"		, 
+				"GasoPerez24"		, 
+				"GasoPerez25"		, 
+				"GasoPerez26"		, 
+				"GasoPerez27"		, 
+				"GasoPerez28"		, 
+				"GasoPerez29"		, 
+				"GasoPerez30"		, 
+				
+				"GasoPerez31"		, 
+				"GasoPerez32"		, 
+				"GasoPerez33"		, 
+				"GasoPerez34"		, 
+				"GasoPerez35"		, 
+				"GasoPerez36"		, 
+				"GasoPerez37"		, 
+				"GasoPerez38"		, 
+				"GasoPerez39"		, 
+				"GasoPerez40"		, 
+				
+				"GasoPerez41"		, 
+				"GasoPerez42"		, 
+				"GasoPerez43"		, 
+				"GasoPerez44"		, 
+				"GasoPerez45"		, 
+				"GasoPerez46"		, 
+				"GasoPerez47"		, 
+				"GasoPerez48"		, 
+				"GasoPerez49"		, 
+				"GasoPerez50"		, 
+				
+				"GasoPerez51"		, 
+				"GasoPerez52"		, 
+				"GasoPerez53"		, 
+				"GasoPerez54"		, 
+				"GasoPerez55"		, 
+				"GasoPerez56"		, 
+				"GasoPerez57"		, 
+				"GasoPerez58"		, 
+				"GasoPerez59"		, 
+				"GasoPerez60"		, 
+				
+				"GasoPerez61"		, 
+				"GasoPerez62"		, 
+				"GasoPerez63"		, 
+				"GasoPerez64"		, 
+				"GasoPerez65"		, 
+				"GasoPerez66"		, 
+				"GasoPerez67"		, 
+				"GasoPerez68"		, 
+				"GasoPerez69"		, 
+				"GasoPerez70"		, 
+				
+				"GasoPerez71"		, 
+				"GasoPerez72"		, 
+				"GasoPerez73"		, 
+				"GasoPerez74"		, 
+				"GasoPerez75"		, 
+				"GasoPerez76"		, 
+				"GasoPerez77"		, 
+				"GasoPerez78"		, 
+				"GasoPerez79"		, 
+				"GasoPerez80"		, 
+				
+				"GasoPerez81"		, 
+				"GasoPerez82"		, 
+				"GasoPerez83"		, 
+				"GasoPerez84"		, 
+				"GasoPerez85"		, 
+				"GasoPerez86"		, 
+				"GasoPerez87"		, 
+				"GasoPerez88"		, 
+				"GasoPerez89"		, 
+				"GasoPerez90"		, 
+				
+				"GasoPerez91"		, 
+				"GasoPerez92"		, 
+				"GasoPerez93"		, 
+				"GasoPerez94"		, 
+				"GasoPerez95"		, 
+				"GasoPerez96"		, 
+				"GasoPerez97"		, 
+				"GasoPerez98"		, 
+				"GasoPerez99"		, 
+				"GasoPerez100"
+			);
 			if(res[1]!=undefined){
-	            document.getElementById("info").innerHTML = res[1];
+				for (var i = 0; i < permitidos.length; i++) {
+					if (a[i] === res[1]) {
+						document.getElementById("info").innerHTML = "PERMITIDO";
+					}else{
+						document.getElementById("info").innerHTML = "NO PERMITIDO";
+					}
+				}
 			}else{
 				document.getElementById("info").innerHTML = "No existe en BD";
 			}
