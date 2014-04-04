@@ -66,18 +66,16 @@ var app = {
 */
 			result = result.text
 			var res = result.split("http://technit.com.mx/gasoperez.php?qwerasdfzxcvqwerasdfzxcv=");
-			document.getElementById("result").innerHTML = result;
-			document.getElementById("info").innerHTML = res;
-/*			if(res[1]!=undefined){
+			if(res[1]!=undefined){
 	            document.getElementById("info").innerHTML = res[1];
 			}else{
 				document.getElementById("info").innerHTML = "No existe en BD";
-			}*/
+			}
             console.log(result);
 
-            if (args.format == "QR_CODE") {
+/*            if (args.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
-            }
+            }*/
 
         }, function (error) { 
             console.log("Scanning failed: ", error); 
