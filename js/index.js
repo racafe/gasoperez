@@ -66,7 +66,7 @@ var app = {
 */
 			var res = result.split("http://technit.com.mx/gasoperez.php?qwerasdfzxcvqwerasdfzxcv=");
 			if(res[1]!=undefined){
-	            document.getElementById("info").innerHTML = result[1];
+	            document.getElementById("info").innerHTML = res[1];
 			}else{
 				document.getElementById("info").innerHTML = "No existe en BD";
 			}
