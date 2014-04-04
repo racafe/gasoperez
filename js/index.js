@@ -181,21 +181,24 @@ var app = {
 				if(res[1]!=undefined){
 					for (var i = 0; i < permitidos.length; i++) {
 						if (permitidos[i] == res[1]) {
-							document.getElementById('body').style.backgroundColor = "#3f3";
-							setTimeout(function(){ document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
+							document.getElementById('body').style.backgroundColor = "#4B946A";
+							document.getElementById('title').innerHTML = "CORRECTO";
+							setTimeout(function(){ document.getElementById('title').innerHTML = ""; document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 							break;
-						}else{
-							document.getElementById('body').style.backgroundColor = "#f33";
-							setTimeout(function(){ document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 						}
-						if(i==permitidos.length-1)
-							setTimeout(function(){ document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
+						if(i==permitidos.length-1){
+							document.getElementById('body').style.backgroundColor = "#f33";
+							document.getElementById('title').innerHTML = "INCORRECTO";
+							setTimeout(function(){ document.getElementById('title').innerHTML = ""; document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
+						}
 					}
 				}else{
 					document.getElementById('body').style.backgroundColor = "#f33";
+					document.getElementById('title').innerHTML = "INCORRECTO";
 					setTimeout(function(){ document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 				}
 			}else{
+				document.getElementById('title').innerHTML = "";
 				document.getElementById('scan').style.display = "block";
 				document.getElementById('logo').style.display = "block";
 				document.getElementById('body').style.backgroundColor = "#fff";
@@ -203,6 +206,7 @@ var app = {
 
         }, function (error) { 
             console.log("Scanning failed: ", error); 
+			document.getElementById('title').innerHTML = "";
 			document.getElementById('scan').style.display = "block";
 			document.getElementById('logo').style.display = "block";
 			document.getElementById('body').style.backgroundColor = "#fff";
