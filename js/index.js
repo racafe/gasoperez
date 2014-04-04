@@ -26,10 +26,10 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // `load`, `deviceready`, `offline`, and `online`.
     bindEvents: function() {
-        document.addEventListener('deviceready',this.onDeviceReady, false);
+//        document.addEventListener('deviceready',this.onDeviceReady, false);
 		document.addEventListener('deviceready',this.scan, false);
         document.getElementById('scan').addEventListener('click', this.scan, false);
-        document.getElementById('encode').addEventListener('click', this.encode, false);
+//        document.getElementById('encode').addEventListener('click', this.encode, false);
     },
 
     // deviceready Event Handler
@@ -56,7 +56,6 @@ var app = {
         console.log('scanning');
         document.getElementById('app').style.display = "none";
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
-
         scanner.scan( function (result) { 
 /*            alert("We got a barcode\n" + 
             "Result: " + result.text + "\n" + 
@@ -64,6 +63,7 @@ var app = {
             "Cancelled: " + result.cancelled);  
 */
 			if(!result.cancelled){
+				navigator.notification.vibrate(2500);
 				result = result.text
 				var res = result.split("http://technit.com.mx/gasoperez.php?qwerasdfzxcvqwerasdfzxcv=");
 				var permitidos = new Array(
