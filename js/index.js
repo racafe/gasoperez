@@ -179,7 +179,7 @@ var app = {
 			);
 			if(res[1]!=undefined){
 				for (var i = 0; i < permitidos.length; i++) {
-					if (a[i] === res[1]) {
+					if (permitidos[i] == res[1]) {
 						document.getElementById("info").innerHTML = "PERMITIDO";
 					}else{
 						document.getElementById("info").innerHTML = "NO PERMITIDO";
