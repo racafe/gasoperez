@@ -195,7 +195,7 @@ var app = {
 				}else{
 					document.getElementById('body').style.backgroundColor = "#f33";
 					document.getElementById('title').innerHTML = "INCORRECTO";
-					setTimeout(function(){ document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
+					setTimeout(function(){ document.getElementById('title').innerHTML = ""; document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 				}
 			}else{
 				document.getElementById('title').innerHTML = "";
