@@ -2,15 +2,15 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.technit.gasoperez"
-        version   = "2.0.0">
-    <name>Gas Rotonda</name>
+        version   = "1.0.0">
+    <name>Rotonda</name>
 
     <description>
         Scans barcodes.
     </description>
 
-    <author href="http://technit.com.mx" email="support@phonegap.com">
-        PhoneGap Team
+    <author href="http://technit.com.mx" email="ventas@technit.com.mx">
+        Technit Team
     </author>
 	
 	<access origin="*" />
@@ -28,9 +28,9 @@
 	
 	<preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="phonegap-version" value="3.3.0" />
-    <preference name="orientation"      value="default" />
+    <preference name="orientation"      value="landscape" />
     <preference name="target-device"    value="universal" />
-    <preference name="fullscreen"       value="true" />
+    <preference name="Fullscreen"       value="true" />
     <preference name="webviewbounce"    value="false" />
 
     <icon src="icon.png" />
