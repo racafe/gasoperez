@@ -176,7 +176,6 @@ var app = {
 				"GasoPerez99"		, 
 				"GasoPerez100"
 			);
-			navigator.notification.vibrate();
 			if(res[1]!=undefined){
 				for (var i = 0; i < permitidos.length; i++) {
 					if (permitidos[i] == res[1]) {
@@ -193,6 +192,7 @@ var app = {
 						setTimeout(function(){ document.getElementById('app').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 				}
 			}else{
+				alert(result.cancelled);
 				setTimeout(function(){ document.getElementById('app').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 				//document.getElementById("info").innerHTML = "No existe en BD";
 			}
