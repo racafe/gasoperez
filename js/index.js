@@ -182,7 +182,7 @@ var app = {
 					for (var i = 0; i < permitidos.length; i++) {
 						if (permitidos[i] == res[1]) {
 							document.getElementById('body').style.backgroundColor = "#4B946A";
-							document.getElementById('title').innerHTML = "CORRECTO";
+							document.getElementById('title').innerHTML = res[1]+"<br>CORRECTO";
 							setTimeout(function(){ document.getElementById('title').innerHTML = ""; document.getElementById('scan').style.display = "block"; document.getElementById('logo').style.display = "block"; document.getElementById('body').style.backgroundColor = "#fff"; },3000);
 							break;
 						}
