@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.technit.gasoperez"
         version   = "1.0.0">
-    <name>Rotonda</name>
+    <name>La Rotonda</name>
 
     <description>
         Scans barcodes.
@@ -28,7 +28,7 @@
 	
 	<preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="phonegap-version" value="3.3.0" />
-    <preference name="orientation"      value="landscape" />
+    <!--preference name="orientation"      value="landscape" /-->
     <preference name="target-device"    value="universal" />
     <preference name="Fullscreen"       value="true" />
     <preference name="webviewbounce"    value="false" />
