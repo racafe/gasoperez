@@ -3,14 +3,14 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.phonegap.technit.gasoperez"
         version   = "1.0.0">
-    <name>Rotonda</name>
+    <name>La Rotonda</name>
 
     <description>
-        Scans barcodes.
+        Escaner de códigos QR para gasolinera La Rotonda
     </description>
 
     <author href="http://technit.com.mx" email="ventas@technit.com.mx">
-        Technit Team
+        Technit Solutions SA de CV
     </author>
 	
 	<access origin="*" />
